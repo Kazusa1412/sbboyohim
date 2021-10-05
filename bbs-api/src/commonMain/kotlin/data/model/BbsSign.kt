@@ -8,8 +8,8 @@ import kotlinx.serialization.Serializable
 public data class BbsSignResponse(
     override val retcode: Int,
     override val message: String,
-    override val data: BbsSignData
-) : BbsResponse<BbsSignData>
+    override val data: BbsSignData?
+) : BbsResponse<BbsSignData?>
 
 @Serializable
 public data class BbsSignData(
