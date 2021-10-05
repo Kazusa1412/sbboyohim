@@ -25,6 +25,12 @@ kotlin {
             }
         }
 
+        val commonTest by getting {
+            dependencies {
+                implementation(kotlin("test"))
+            }
+        }
+
         val jvmMain by getting {
             dependencies {
                 api("io.ktor:ktor-client-cio:${Versions.ktor}")
@@ -34,6 +40,7 @@ kotlin {
         val jsMain by getting {
             dependencies {
                 api("io.ktor:ktor-client-js:${Versions.ktor}")
+                api("org.jetbrains.kotlinx:kotlinx-serialization-json-js:${Versions.serialization}")
             }
         }
 

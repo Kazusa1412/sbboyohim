@@ -1,7 +1,7 @@
 package com.elouyi.sbboyohim.data
 
 
-public interface GenshinResponse<T> {
+public interface BbsResponse<T> {
 
     public val retcode: Int
 
