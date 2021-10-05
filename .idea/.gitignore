@@ -8,3 +8,6 @@
 /httpRequests/
 
 /*.xml
+
+/modules
+/artifacts/
