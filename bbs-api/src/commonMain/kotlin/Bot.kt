@@ -1,5 +1,6 @@
 package com.elouyi.sbboyohim
 
+import com.elouyi.sbboyohim.data.model.BbsSignInfoResponse
 import com.elouyi.sbboyohim.data.model.BbsSignResponse
 import com.elouyi.sbboyohim.data.repository.BbsRepository
 
@@ -31,4 +32,8 @@ public interface Bot {
 
 public suspend fun Bot.bbsSign(): BbsSignResponse {
     return repository.bbsSign(this)
+}
+
+public suspend fun Bot.bbsSignInfo(): BbsSignInfoResponse {
+    return repository.bbsSignInfo(this)
 }
