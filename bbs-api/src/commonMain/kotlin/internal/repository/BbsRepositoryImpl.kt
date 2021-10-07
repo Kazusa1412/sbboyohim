@@ -49,6 +49,7 @@ internal class BbsRepositoryImpl(
         }
     }
 
+    @Deprecated("")
     private fun bbsSignBody(
         uid: Int,
         actId: String,
@@ -67,5 +68,5 @@ internal class BbsRepositoryImpl(
         @SerialName("act_id")
         val actId: String,
         val region: String
-        )
+    )
 }

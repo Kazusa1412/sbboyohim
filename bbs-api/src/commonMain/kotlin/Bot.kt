@@ -30,10 +30,7 @@ public interface Bot {
     public var cookieString: String
 }
 
-public suspend fun Bot.bbsSign(): BbsSignResponse {
-    return repository.bbsSign(this)
-}
+public suspend fun Bot.bbsSign(): BbsSignResponse = repository.bbsSign(this)
 
-public suspend fun Bot.bbsSignInfo(): BbsSignInfoResponse {
-    return repository.bbsSignInfo(this)
-}
+public suspend fun Bot.bbsSignInfo(): BbsSignInfoResponse = repository.bbsSignInfo(this)
+

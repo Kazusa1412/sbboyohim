@@ -55,11 +55,12 @@ object BbsSign {
     }
 
     private fun printSignResult(bot: Bot, res: BbsSignInfoResponse) {
-        if (res.retcode != 0) {
+        if (res.retcode != 0 || res.data == null || !res.data!!.isSign) {
             System.err.println("uid: ${bot.uid} 签到失败")
             System.err.println(res)
             return
         }
+
         println("uid: ${bot.uid} 签到成功")
         println(res)
         println()
